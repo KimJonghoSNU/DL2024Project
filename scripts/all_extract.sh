@@ -1,4 +1,4 @@
-export CUDA_VISIBLE_DEVICES=6,7
+export CUDA_VISIBLE_DEVICES=0,1
 # specify model name
 model_path="/workspace/data03/pretrained_models/Meta-Llama-3.1-8B-Instruct"
 model_name="Meta-Llama-3.1-8B-Instruct"

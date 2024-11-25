@@ -1,0 +1,2 @@
+Accuracy,Incorrect,Parse Error
+0.0070,0.4042,0.5888

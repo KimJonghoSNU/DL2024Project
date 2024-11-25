@@ -37,11 +37,12 @@ for pred, label in zip(predictions, labels):
         parse_error += 1
     total += 1
 
-args.out_path = os.path.splitext(args.pred)[0] + "_eval.txt"
+args.out_path = os.path.splitext(args.prediction_file)[0] + "_eval.txt"
     
 with open(args.out_path, "w", encoding="utf-8") as f:
-    f.write(",".joing(["Accuracy", "Incorrect", "Parse Error"]) + "\n")
-    f.write("Accuracy: {:.4f}\n".format(correct / total))
-    f.write("Incorrect: {:.4f}\n".format(incorrect / total))
-    f.write("Parse Error: {:.4f}\n".format(parse_error / total))
+    f.write(",".join(["Accuracy", "Incorrect", "Parse Error"]) + "\n")
+    f.write("{:.4f},{:.4f},{:.4f}\n".format(correct / total, incorrect / total, parse_error / total))
+    # f.write("{:.4f}\n".format(correct / total))
+    # f.write("{:.4f}\n".format(incorrect / total))
+    # f.write("{:.4f}\n".format(parse_error / total))
     

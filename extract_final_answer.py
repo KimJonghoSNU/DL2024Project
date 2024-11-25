@@ -97,7 +97,7 @@ parser.add_argument("--dataset", type=str, default="tracie", help = "Dataset to 
 args = parser.parse_args()
 
 # jsonl
-dataset = [json.loads(line) for line in open(args.dataset, "r", encoding="utf-8")]
+dataset = [json.loads(line) for line in open(args.output_path, "r", encoding="utf-8")]
 
 print(args)
 print(f"Dataset size: {len(dataset)}")
